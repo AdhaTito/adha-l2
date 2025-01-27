@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Dul 2</title>
+    <!-- Link flowbite -->
+    <link rel="stylesheet" href="./dist/flowbite.min.css">
+    <!-- Link to tailwind css -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- Link to font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="w-screen h-screen bg-yellow-200 bg-center bg-no-repeat font-poppins">
+    <!-- Navbar -->
+    <nav class="fixed z-10 w-full bg-orange-400 border-gray-200 dark:bg-gray-900 drop-shadow-xl">
+        <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
+            <a href="https://flowbite.com/" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <img src="./assets/image/download.png" class="h-8 rounded-full" alt="Logo El Dul" />
+                <span class="self-center text-lg font-bold text-white whitespace-nowrap">El Dul (L2
+                    Wondr)</span>
+            </a>
+            <button data-collapse-toggle="navbar-default" type="button"
+                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-default" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
+                <ul
+                    class="flex flex-col p-4 mt-4 font-medium bg-orange-400 border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-orange-400 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                    <li>
+                        <a href="./index.html"
+                            class="block px-3 py-2 text-gray-900 transition-all duration-300 bg-orange-400 rounded md:hover:text-white md:hover:bg-transparent hover:bg-gray-100 md:bg-transparent md:text-orange-400 md:p-0 dark:text-white md:dark:text-orange-400">Home</a>
+                    </li>
+                    <li>
+                        <a href="./monitoring.html"
+                            class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Monitoring</a>
+                    </li>
+                    <li>
+                        <a href="./reporting.html"
+                            class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Reporting</a>
+                    </li>
+                    <li>
+                        <a href="./sharepoint.html"
+                            class="block px-3 py-2 text-white rounded md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                            aria-current="page transition-all duration-300">Share
+                            Point</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- end navbar -->
+    <section id="judul-halaman">
+        <div class="container mx-auto">
+            <div class="pt-24 text-center justify-items-center">
+                <img src="./assets/image/logo-wondr2.png" width="200px" alt="">
+                <h1 class="mt-6 mb-2 text-4xl font-bold">SHARE POINT</h1>
+                <h2 class="flex items-center text-lg font-medium">
+                    <img src="./assets/image/sun.png" width="25px" alt="">
+                    Pagi 06.00 - 15.00
+                </h2>
+                <h2 class="flex items-center text-lg font-medium">
+                    <img src="./assets/image/night.png" class="" width="25px" alt="">
+                    siang 14.00 - 23.00
+                </h2>
+            </div>
+        </div>
+    </section>
+    <!-- Blur -->
+    <div class="relative">
+        <div
+            class="absolute w-32 h-32 rounded-full -z-10 right-4 md:top-40 md:right-24 bg-mainColor/20 md:bg-mainColor/20 blur-xl">
+        </div>
+    </div>
+    <!-- End Blur -->
+    <!-- Blur -->
+    <div class="relative">
+        <div class="absolute w-32 h-32 rounded-full left-20 -z-10 bg-mainColor/20 blur-xl"></div>
+    </div>
+    <!-- end blur -->
+    <section id="home" class="flex items-center justify-center h-screen mt-40 md:mt-0">
+        <div class="grid grid-cols-2 grid-rows-2 gap-10 text-center sm:grid-cols-3 lg:grid-cols-4">
+            <div class="flex items-center justify-center p-4 bg-gray-200 w-[200px] h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ring-4 ring-orange-400">
+                <a target="_blank"
+                    href="https://docs.google.com/spreadsheets/d/193GHEluWr8Tgy8XCwoPav5dhBMKI_s-MTR9gpZSqZ5Y/edit?gid=942919145#gid=942919145"
+                    class="text-2xl font-bold text-slate-600">
+                    SHIFT SCHEDULE
+                </a>
+            </div>
+            <div class="flex items-center justify-center p-4 bg-gray-200 w-[200px] h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+                <a target="_blank" href="https://progo.bni.co.id" class="text-2xl font-bold text-slate-600">
+                    ProGO BNI
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- JS Flowbite -->
+    <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
+</body>
+
+</html>
