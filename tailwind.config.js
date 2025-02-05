@@ -13,7 +13,7 @@ module.exports = {
     },
     extend: {
       boxShadow: {
-        custom: "14px 14px 0 rgba(0, 0, 0, 0.2)", // Posisi khusus
+        custom: "10px 10px 0 rgba(0, 0, 0, 0.2)", // Posisi khusus
         "custom-inset": "inset 5px 5px 0 rgba(0, 0, 0, 0.3)", // Shadow inset
       },
       backgroundPosition: {
