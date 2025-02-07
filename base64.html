@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 to Image</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        textarea {
+            width: 80%;
+            height: 100px;
+            margin: 10px;
+        }
+
+        img {
+            margin-top: 20px;
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Base64 to Image Converter</h2>
+    <textarea id="base64Input" placeholder="Masukkan Base64 di sini..."></textarea>
+    <br>
+    <button onclick="convertBase64ToImage()">Convert</button>
+    <br>
+    <img id="outputImage" alt="Gambar akan muncul di sini" style="display:none;">
+
+    <script src="./base64.js"></script>
+</body>
+
+</html>

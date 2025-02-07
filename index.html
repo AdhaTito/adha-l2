@@ -17,7 +17,8 @@
         rel="stylesheet" />
 </head>
 
-<body class="w-screen h-screen bg-center bg-no-repeat font-poppins">
+<body class="w-screen h-screen bg-center bg-no-repeat bg-slate-900 font-poppins">
+
     <!-- Navbar -->
     <nav class="fixed z-10 w-full bg-orange-400 border-gray-200 dark:bg-gray-900 drop-shadow-xl">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
@@ -53,18 +54,19 @@
                             class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Reporting</a>
                     </li>
                     <li>
-                        <a href="./sharepoint.html"
-                            class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Share
-                            Point</a>
+                        <a href="./tools.html"
+                            class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Tools
+                            L2</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
     <!-- end navbar -->
+
     <section id="judul-halaman">
         <div class="container mx-auto">
-            <div class="pt-24 text-center justify-items-center">
+            <div class="pt-24 text-center text-white justify-items-center">
                 <img src="./assets/image/logo-wondr2.png" width="200px" alt="">
                 <h1 class="mt-6 mb-2 text-4xl font-bold">SCHEDULE SHIFT</h1>
                 <h2 class="flex items-center text-lg font-medium">
@@ -93,81 +95,91 @@
 
     <!-- BOX -->
     <section id="home" class="flex items-center justify-center h-screen mt-40 md:mt-0">
-        <div class="grid grid-cols-2 grid-rows-2 gap-10 m-8 text-center sm:grid-cols-3 lg:grid-cols-4">
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ring-4 ring-orange-400">
+        <div class="grid grid-cols-2 grid-rows-2 gap-10 m-8 sm:grid-cols-3 lg:grid-cols-4">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom hover:shadow-orange-400 hover:scale-105 transition-all text-center duration-300 ease-in hover:ring-4 hover:ring-orange-400 relative group">
                 <a target="_blank"
                     href="https://docs.google.com/spreadsheets/d/193GHEluWr8Tgy8XCwoPav5dhBMKI_s-MTR9gpZSqZ5Y/edit?gid=942919145#gid=942919145"
-                    class="text-lg font-bold md:text-2xl text-slate-600">
-                    SHIFT SCHEDULE
+                    class="flex flex-col items-center space-y-2 text-lg font-bold md:text-2xl text-slate-600">
+                    <img src="./assets/image/schedule.png" width="50px" class="" alt="">
+                    <span>SHIFT SCHEDULE</span>
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all text-center duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank" href="https://progo.bni.co.id" class="text-lg font-bold md:text-2xl text-slate-600">
                     ProGO BNI
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank" href="https://elk-kibana01-dc1-mvrk.bni.co.id:5601/app/r/s/duNQ1"
                     class="text-lg font-bold md:text-2xl text-slate-600">
-                    Kibana DC1
+                    <img src="./assets/image/elastic-logo.png" width="50px" class="float-left m-2" alt="">Kibana
+                    DC1
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank" href="https://elk-kibana01-dc2-mvrk.bni.co.id:5601/app/r/s/Bf8dx"
                     class="text-lg font-bold md:text-2xl text-slate-600">
-                    Kibana DC2
+                    <img src="./assets/image/elastic-logo.png" width="50px" class="float-left m-2" alt="">Kibana DC2
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank" href="https://elk-kibana01-dc2-beta.bni.co.id:5601/app/r/s/CWpfK"
                     class="text-lg font-bold md:text-2xl text-slate-600">
-                    Kibana Preprod
+                    <img src="./assets/image/elastic-logo.png" width="50px" class="float-left m-2" alt="">Kibana Preprod
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all text-center duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank" href="https://dcp-opskit.bni.co.id/"
                     class="text-lg font-bold md:text-2xl text-slate-600">
                     Redish BNI Wondr
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all text-center duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank" href="https://confluence.bni.co.id/"
                     class="text-lg font-bold md:text-2xl text-slate-600">
                     <img src="./assets/image/BankNegaraIndonesia46-logo.svg.png" width="100px" alt=""> Confluence
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all text-center duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank" href="https://jira.bni.co.id/browse/MAV-82207    "
                     class="text-lg font-bold md:text-2xl text-slate-600">
                     <img src="./assets/image/Jira_Logo.svg.png" alt="">
                 </a>
             </div>
-            <div class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
-                hover:shadow-orange-400 hover:scale-105 transition-all duration-300 ease-in ">
+            <div
+                class="flex items-center justify-center p-4 bg-yellow-200 w-40 h-40 md:w-[200px] md:h-[200px] rounded-3xl hover:shadow-custom
+                hover:shadow-orange-400 hover:scale-105 transition-all text-center duration-300 ease-in hover:ring-4 hover:ring-orange-400 ">
                 <a target="_blank"
                     href="https://bankbnitbk.sharepoint.com/sites/DCS-L2Wondr/Shared%20Documents/Forms/AllItems.aspx?id=%2Fsites%2FDCS%2DL2Wondr%2FShared%20Documents%2FGeneral%2FL2%20Document&p=true&ga=1"
-                    class="text-lg font-bold md:text-2xl text-slate-600">
-                    LoogBook Shift
+                    class="flex flex-col items-center space-y-2 text-lg font-bold md:text-2xl text-slate-600">
+                    <img src="./assets/image/loogbook.png" width="50px" class="" alt="">LoogBook Shift
                 </a>
             </div>
         </div>
     </section>
     <!-- End BOX -->
     <!-- Footer -->
-    <footer class="m-4 mt-20 bg-white rounded-lg shadow-sm dark:bg-gray-800">
+    <footer class="w-full mt-10 bg-orange-400 shadow-sm dark:bg-gray-800">
         <div class="w-full max-w-screen-xl p-4 mx-auto md:flex md:items-center md:justify-between">
-            <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://flowbite.com/"
-                    class="hover:underline">Flowbite™</a>. All Rights Reserved.
+            <span class="text-sm text-gray-800 sm:text-center dark:text-gray-400">© 2025 <a
+                    href="https://adhatito.github.io/Portofolio-Tailwind/" class="hover:underline">Adha Mastito</a>
             </span>
-            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
+            <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-800 dark:text-gray-400 sm:mt-0">
                 <li>
                     <a href="#" class="hover:underline me-4 md:me-6">About</a>
                 </li>
