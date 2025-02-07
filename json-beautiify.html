@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Beautifier & Compare</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        textarea {
+            width: 45%;
+            height: 200px;
+            margin: 10px;
+        }
+
+        pre {
+            background: #ffffff;
+            color: #2c2c2c;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .highlight {
+            background-color: #e0ad8b;
+            padding: 2px;
+        }
+
+        .comparison-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .comparison-box {
+            width: 45%;
+            background: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>JSON Beautifier & Compare</h2>
+
+    <div class="container">
+        <textarea id="jsonInput1" placeholder="Masukkan JSON Pertama"></textarea>
+        <textarea id="jsonInput2" placeholder="Masukkan JSON Kedua"></textarea>
+    </div>
+
+    <button onclick="beautifyJson(1)">Beautify JSON 1</button>
+    <button onclick="beautifyJson(2)">Beautify JSON 2</button>
+    <button onclick="compareJson()">Compare JSON</button>
+
+    <h3>Hasil Perbandingan</h3>
+    <div class="comparison-container">
+        <pre id="comparisonResult1" class="comparison-box"></pre>
+        <pre id="comparisonResult2" class="comparison-box"></pre>
+    </div>
+
+    <script src="./json-beautify.js"></script>
+</body>
+
+</html>
