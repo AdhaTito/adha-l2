@@ -1,22 +1,22 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>El Dul 2</title>
     <!-- Link flowbite -->
-    <!-- <link rel="stylesheet" href="./dist/flowbite.min.css"> -->
+    <link rel="stylesheet" href="./dist/flowbite.min.css">
     <!-- Link to tailwind css -->
-    <!-- <link rel="stylesheet" href="./src/output.css"> -->
+    <link rel="stylesheet" href="./src/output.css">
     <!-- Link to font -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
-    <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /> -->
-    <!-- <link
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet" /> -->
+        rel="stylesheet" />
 
-    <style>
+    <!-- <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
@@ -65,12 +65,12 @@
             white-space: pre-wrap;
             word-wrap: break-word;
         }
-    </style>
+    </style> -->
 </head>
 
-<body>
+<body class="">
     <!-- Navbar -->
-    <!-- <nav class="fixed z-10 w-full bg-orange-400 border-gray-200 dark:bg-gray-900 drop-shadow-xl">
+    <nav class="fixed z-10 w-full bg-orange-400 border-gray-200 dark:bg-gray-900 drop-shadow-xl">
         <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
             <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
                 <img src="./assets/image/download.png" class="h-8 rounded-full" alt="Logo El Dul" />
@@ -111,16 +111,16 @@
                 </ul>
             </div>
         </div>
-    </nav> -->
+    </nav>
     <!-- end navbar -->
     <section id="Beautifier">
-        <div class="">
-            <h2 class="mt-52">JSON Beautifier & Compare</h2>
+        <div class="container mx-auto">
+            <h2 class="pt-24 text-4xl font-bold text-orange-400">JSON Beautifier & Compare</h2>
         </div>
     </section>
 
     <div class="container">
-        <textarea id="jsonInput1" placeholder="Masukkan JSON Pertama"></textarea>
+        <textarea id="jsonInput1" class="" placeholder="Masukkan JSON Pertama"></textarea>
         <textarea id="jsonInput2" placeholder="Masukkan JSON Kedua"></textarea>
     </div>
 
@@ -135,7 +135,7 @@
     </div>
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
-    <script src="./json-beautify.js"></script>
+    <script src="./src/json-beautify.js"></script>
 </body>
 
 </html>

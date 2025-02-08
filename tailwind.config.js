@@ -3,6 +3,11 @@ module.exports = {
   darkMode: "class",
   content: [
     "index.html",
+    "monitoring.html",
+    "reporting.html",
+    "tools.html",
+    "json-beautify.html",
+    "base64.html",
     "./src/**/*.{html,js}",
     "./node_modules/flowbite/**/*.js",
   ],
