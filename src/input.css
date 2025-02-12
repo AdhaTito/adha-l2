@@ -3,4 +3,28 @@
 @tailwind utilities;
 
 @layer components {
+  .comparison-box {
+    width: 45%;
+    background: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: left;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+  .highlight {
+    background-color: #e0ad8b;
+    padding: 2px;
+  }
+  .comparison-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  .base64 {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+  }
 }

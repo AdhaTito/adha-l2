@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Dul 2</title>
+    <title>JSON Beautifier</title>
     <!-- Link flowbite -->
     <link rel="stylesheet" href="./dist/flowbite.min.css">
     <!-- Link to tailwind css -->
@@ -15,123 +15,38 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet" />
-
-    <!-- <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 20px;
-        }
-
-        textarea {
-            width: 45%;
-            height: 200px;
-            margin: 10px;
-        }
-
-        pre {
-            background: #ffffff;
-            color: #2c2c2c;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: left;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .highlight {
-            background-color: #e0ad8b;
-            padding: 2px;
-        }
-
-        .comparison-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-        }
-
-        .comparison-box {
-            width: 45%;
-            background: #f4f4f4;
-            padding: 10px;
-            border-radius: 5px;
-            text-align: left;
-            white-space: pre-wrap;
-            word-wrap: break-word;
-        }
-    </style> -->
 </head>
 
-<body class="">
-    <!-- Navbar -->
-    <nav class="fixed z-10 w-full bg-orange-400 border-gray-200 dark:bg-gray-900 drop-shadow-xl">
-        <div class="flex flex-wrap items-center justify-between max-w-screen-xl p-4 mx-auto">
-            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-                <img src="./assets/image/download.png" class="h-8 rounded-full" alt="Logo El Dul" />
-                <span class="self-center text-lg font-bold text-white whitespace-nowrap">El Dul (L2
-                    Wondr)</span>
-            </a>
-            <button data-collapse-toggle="navbar-default" type="button"
-                class="inline-flex items-center justify-center w-10 h-10 p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-                aria-controls="navbar-default" aria-expanded="false">
-                <span class="sr-only">Open main menu</span>
-                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
-                    viewBox="0 0 17 14">
-                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M1 1h15M1 7h15M1 13h15" />
-                </svg>
-            </button>
-            <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-                <ul
-                    class="flex flex-col p-4 mt-4 font-medium transition-all duration-300 bg-orange-400 border border-gray-100 rounded-lg md:p-0 md:flex-row md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-orange-400 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-                    <li>
-                        <a href="./index.html"
-                            class="block px-3 py-2 text-white bg-orange-400 rounded md:bg-transparent md:text-white md:p-0 dark:text-white md:dark:text-orange-400"
-                            aria-current="page transition-all duration-300">Home</a>
-                    </li>
-                    <li>
-                        <a href="./monitoring.html"
-                            class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Monitoring</a>
-                    </li>
-                    <li>
-                        <a href="./reporting.html"
-                            class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Reporting</a>
-                    </li>
-                    <li>
-                        <a href="./tools.html"
-                            class="block px-3 py-2 text-gray-900 transition-all duration-300 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-white md:p-0 dark:text-white md:dark:hover:text-orange-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent">Tools
-                            L2</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- end navbar -->
-    <section id="Beautifier">
-        <div class="container mx-auto">
+<body class="justify-center text-center dark:bg-slate-900 font-poppins dark:text-white">
+
+    <section id="judul-halaman">
+        <div class="container mx-auto mb-12 text-center">
             <h2 class="pt-24 text-4xl font-bold text-orange-400">JSON Beautifier & Compare</h2>
         </div>
     </section>
 
-    <div class="container">
-        <textarea id="jsonInput1" class="" placeholder="Masukkan JSON Pertama"></textarea>
-        <textarea id="jsonInput2" placeholder="Masukkan JSON Kedua"></textarea>
-    </div>
+    <section id="text-box">
+        <div class="container">
+            <div class="flex justify-center gap-4 text-slate-900">
+                <textarea id="jsonInput1" class="w-1/2 h-[400px] m-4 resize rounded-lg border-gray-300 focus:border-2 focus:outline-none
+                    focus:ring-0 focus:border-orange-400" placeholder="Masukkan JSON Pertama"></textarea>
+                <textarea id="jsonInput2" class="w-1/2 h-[400px] m-4 resize rounded-lg border-gray-300 focus:border-2 focus:outline-none
+                    focus:ring-0 focus:border-orange-400" placeholder="Masukkan JSON Kedua"></textarea>
+            </div>
+        </div>
+    </section>
 
-    <button onclick="beautifyJson(1)">Beautify JSON 1</button>
-    <button onclick="beautifyJson(2)">Beautify JSON 2</button>
-    <button onclick="compareJson()">Compare JSON</button>
+    <button class="p-2 m-4 bg-orange-400 rounded hover:bg-orange-300" onclick="beautifyJson(1)">Beautify JSON
+        1</button>
+    <button class="p-2 m-4 bg-orange-400 rounded hover:bg-orange-300" onclick="beautifyJson(2)">Beautify JSON 2</button>
+    <button class="p-2 m-4 bg-orange-400 rounded hover:bg-orange-300" onclick="compareJson()">Compare JSON</button>
 
-    <h3>Hasil Perbandingan</h3>
-    <div class="comparison-container">
-        <pre id="comparisonResult1" class="comparison-box"></pre>
-        <pre id="comparisonResult2" class="comparison-box"></pre>
+    <div class="mt-4">
+        <h3 class="font-bold text-orange-400">Hasil Perbandingan</h3>
+        <div class="text-black comparison-container">
+            <pre id="comparisonResult1" class="comparison-box"></pre>
+            <pre id="comparisonResult2" class="comparison-box"></pre>
+        </div>
     </div>
 
     <script src="./node_modules/flowbite/dist/flowbite.min.js"></script>
