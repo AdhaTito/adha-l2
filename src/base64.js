@@ -16,7 +16,9 @@ function convertBase64ToImage() {
   }
 
   // Bersihkan karakter non-Base64 yang umum: spasi, newline, dll
-  base64String = base64String.replace(/\r\n/g, "");
+  // Membersihkan semua karakter pemisah baris, spasi, tab, dll
+base64String = base64String.replace(/(\r\n|\n|\r|\t|\s)/g, "");
+
 
   // Cek apakah sudah memiliki prefix
   if (!base64String.startsWith("data:image")) {
