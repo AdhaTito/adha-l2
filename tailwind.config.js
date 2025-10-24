@@ -8,6 +8,7 @@ module.exports = {
     "tools.html",
     "json-beautify.html",
     "base64.html",
+    "multiple-query.html",
     "./src/**/*.{html,js}",
     "./node_modules/flowbite/**/*.js",
   ],
