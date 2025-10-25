@@ -73,6 +73,7 @@ processBtn.addEventListener("click", () => {
   Papa.parse(file, {
     header: true,
     skipEmptyLines: true,
+    delimiter: "", // kosong = auto detect
     complete: async function (results) {
       const rows = results.data;
       const zip = new JSZip();
