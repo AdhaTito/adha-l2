@@ -75,8 +75,12 @@
         <div class="absolute w-32 h-32 rounded-full left-20 -z-10 bg-mainColor/30 blur-xl"></div>
     </div>
     <!-- end blur -->
+    <!-- ✅ Pastikan library dimuat DULU -->
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jszip@3.10.1/dist/jszip.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/file-saver@2.0.5/dist/FileSaver.min.js"></script>
 
-    <!-- script cvtimage -->
+    <!-- ✅ Baru panggil file JS kamu setelah semua library dimuat -->
     <script src="./src/cvtimage.js"></script>
 </body>
 
