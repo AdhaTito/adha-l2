@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" class="antialiased">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FDS Report</title>
+    <!-- Link flowbite -->
+    <link rel="stylesheet" href="./dist/flowbite.min.css">
+    <!-- Link to tailwind css -->
+    <link rel="stylesheet" href="./src/output.css">
+    <!-- Link to font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet" />
+</head>
+
+<body class="flex items-start justify-center min-h-screen p-6 bg-slate-900">
+    <!-- Blur -->
+    <div class="relative">
+        <div
+            class="absolute w-32 h-32 rounded-full -z-10 right-4 md:top-40 md:right-24 bg-mainColor/20 md:bg-mainColor/20 blur-xl">
+        </div>
+    </div>
+    <!-- End Blur -->
+    <div class="w-full max-w-3xl p-6 shadow-md bg-slate-700 rounded-xl">
+        <h1 class="mb-4 text-2xl font-bold text-orange-400">CSV → Images (base64) — Export ZIP</h1>
+        <p class="mb-4 text-sm text-white">
+            Unggah file CSV apapun (nama bebas). Pilih kolom yang berisi base64 image dan kolom ID (mis. NIK).
+            Aplikasi ini akan membuat ZIP berisi file gambar yang dinamai &quot;<em>{ID}_KTP.jpg</em>&quot; &amp;
+            &quot;<em>{ID}_FR.jpg</em>&quot; (atau sesuai pilihan).
+        </p>
+
+        <div class="space-y-4">
+            <div>
+                <label class="block mb-2 text-sm font-medium text-white">Pilih file CSV</label>
+                <input id="csvFile" type="file" accept=".csv,text/csv" class="block w-full rounded-md bg-slate-200" />
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block mb-2 text-sm font-medium text-white">Delimiter (kosong = auto)</label>
+                    <input id="delimiter" placeholder="cth: | atau , atau ;" class="w-full p-2 border rounded" />
+                </div>
+                <div>
+                    <label class="block mb-2 text-sm font-medium text-white">Baris header?</label>
+                    <select id="hasHeader" class="w-full p-2 border rounded">
+                        <option value="true" selected>Ya — CSV punya header</option>
+                        <option value="false">Tidak — gunakan index kolom</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="space-y-2">
+                <label class="block mb-2 text-sm font-medium text-white">Kolom (setelah parse)</label>
+                <div class="flex gap-2">
+                    <select id="colImage1" class="flex-1 p-2 border rounded">
+                        <option value="">(pilih kolom gambar 1)</option>
+                    </select>
+                    <select id="colImage2" class="flex-1 p-2 border rounded">
+                        <option value="">(pilih kolom gambar 2 — optional)</option>
+                    </select>
+                    <select id="colId" class="flex-1 p-2 border rounded">
+                        <option value="">(pilih kolom ID / NIK)</option>
+                    </select>
+                </div>
+                <p class="text-xs text-slate-300">Jika CSV tidak punya header, kolom akan diberi nama
+                    <code>col_0</code>, <code>col_1</code>, ...</p>
+            </div>
+
+            <div class="grid grid-cols-2 gap-4">
+                <div>
+                    <label class="block mb-2 text-sm font-medium text-white">Nama folder output untuk
+                        gambar1</label>
+                    <input id="folder1" value="KTP" class="w-full p-2 border rounded" />
+                </div>
+                <div>
+                    <label class="block mb-2 text-sm font-medium text-white">Nama folder output untuk
+                        gambar2</label>
+                    <input id="folder2" value="FR" class="w-full p-2 border rounded" />
+                </div>
+            </div>
+
+            <div class="flex gap-2">
+                <button id="previewBtn" class="px-4 py-2 text-white rounded bg-slate-600 hover:bg-slate-700">Preview
+                    Columns</button>
+                <button id="processBtn" class="px-4 py-2 text-white bg-indigo-600 rounded hover:bg-indigo-700">Process &
+                    Download ZIP</button>
+                <button id="clearBtn" class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">Clear</button>
+            </div>
+
+            <div id="log" class="p-3 overflow-auto text-sm border rounded text-slate-700/90 bg-slate-50 h-36"></div>
+        </div>
+    </div>
+    <!-- Blur -->
+    <div class="relative">
+        <div class="absolute w-32 h-32 rounded-full left-20 -z-10 bg-mainColor/20 blur-xl"></div>
+    </div>
+    <!-- end blur -->
+    <!-- Blur -->
+    <div class="relative">
+        <div class="absolute w-32 h-32 rounded-full left-20 -z-10 bg-mainColor/20 blur-xl"></div>
+    </div>
+    <!-- end blur -->
+    <script src="./src/cvtimage.js"></script>
+</body>
+
+</html>

@@ -9,6 +9,7 @@ module.exports = {
     "json-beautify.html",
     "base64.html",
     "multiple-query.html",
+    "cvtimage.html",
     "./src/**/*.{html,js}",
     "./node_modules/flowbite/**/*.js",
   ],
