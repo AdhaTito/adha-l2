@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en" class="antialiased">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FDS Report</title>
+    <title>cvtimage</title>
     <!-- Link flowbite -->
     <link rel="stylesheet" href="./dist/flowbite.min.css">
     <!-- Link to tailwind css -->
@@ -17,7 +17,7 @@
         rel="stylesheet" />
 </head>
 
-<body class="flex items-start justify-center min-h-screen p-6 bg-slate-900">
+<body class="flex items-center justify-center min-h-screen bg-slate-900">
     <!-- Blur -->
     <div class="relative">
         <div
@@ -25,85 +25,56 @@
         </div>
     </div>
     <!-- End Blur -->
-    <div class="w-full max-w-3xl p-6 shadow-md bg-slate-700 rounded-xl">
-        <h1 class="mb-4 text-2xl font-bold text-orange-400">CSV → Images (base64) — Export ZIP</h1>
-        <p class="mb-4 text-sm text-white">
-            Unggah file CSV apapun (nama bebas). Pilih kolom yang berisi base64 image dan kolom ID (mis. NIK).
-            Aplikasi ini akan membuat ZIP berisi file gambar yang dinamai &quot;<em>{ID}_KTP.jpg</em>&quot; &amp;
-            &quot;<em>{ID}_FR.jpg</em>&quot; (atau sesuai pilihan).
+
+    <div class="w-full max-w-lg p-8 text-center bg-white shadow-lg rounded-2xl">
+        <h1 class="mb-4 text-2xl font-bold text-mainColor">
+            🧩 CSV to Image ZIP
+        </h1>
+        <p class="mb-6 text-sm text-gray-600">
+            Format CSV harus benar:<br />
+            <code>ktp_image,zoloz_image,nik</code>
         </p>
 
-        <div class="space-y-4">
-            <div>
-                <label class="block mb-2 text-sm font-medium text-white">Pilih file CSV</label>
-                <input id="csvFile" type="file" accept=".csv,text/csv" class="block w-full rounded-md bg-slate-200" />
-            </div>
+        <!-- Upload CSV -->
+        <input id="csvFile" type="file" accept=".csv"
+            class="block w-full mb-4 border rounded-lg file:bg-orange-400 border-slate-600" />
 
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <label class="block mb-2 text-sm font-medium text-white">Delimiter (kosong = auto)</label>
-                    <input id="delimiter" placeholder="cth: | atau , atau ;" class="w-full p-2 border rounded" />
-                </div>
-                <div>
-                    <label class="block mb-2 text-sm font-medium text-white">Baris header?</label>
-                    <select id="hasHeader" class="w-full p-2 border rounded">
-                        <option value="true" selected>Ya — CSV punya header</option>
-                        <option value="false">Tidak — gunakan index kolom</option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="space-y-2">
-                <label class="block mb-2 text-sm font-medium text-white">Kolom (setelah parse)</label>
-                <div class="flex gap-2">
-                    <select id="colImage1" class="flex-1 p-2 border rounded">
-                        <option value="">(pilih kolom gambar 1)</option>
-                    </select>
-                    <select id="colImage2" class="flex-1 p-2 border rounded">
-                        <option value="">(pilih kolom gambar 2 — optional)</option>
-                    </select>
-                    <select id="colId" class="flex-1 p-2 border rounded">
-                        <option value="">(pilih kolom ID / NIK)</option>
-                    </select>
-                </div>
-                <p class="text-xs text-slate-300">Jika CSV tidak punya header, kolom akan diberi nama
-                    <code>col_0</code>, <code>col_1</code>, ...</p>
-            </div>
-
-            <div class="grid grid-cols-2 gap-4">
-                <div>
-                    <label class="block mb-2 text-sm font-medium text-white">Nama folder output untuk
-                        gambar1</label>
-                    <input id="folder1" value="KTP" class="w-full p-2 border rounded" />
-                </div>
-                <div>
-                    <label class="block mb-2 text-sm font-medium text-white">Nama folder output untuk
-                        gambar2</label>
-                    <input id="folder2" value="FR" class="w-full p-2 border rounded" />
-                </div>
-            </div>
-
-            <div class="flex gap-2">
-                <button id="previewBtn" class="px-4 py-2 text-white rounded bg-slate-600 hover:bg-slate-700">Preview
-                    Columns</button>
-                <button id="processBtn" class="px-4 py-2 text-white bg-indigo-600 rounded hover:bg-indigo-700">Process &
-                    Download ZIP</button>
-                <button id="clearBtn" class="px-4 py-2 text-white bg-red-500 rounded hover:bg-red-600">Clear</button>
-            </div>
-
-            <div id="log" class="p-3 overflow-auto text-sm border rounded text-slate-700/90 bg-slate-50 h-36"></div>
+        <!-- Buttons -->
+        <div class="flex gap-2 mb-6">
+            <button id="previewBtn"
+                class="flex-1 py-2 text-sm font-medium text-white bg-gray-500 rounded-lg hover:bg-gray-600">
+                Preview Columns
+            </button>
+            <button id="clearBtn"
+                class="flex-1 py-2 text-sm font-medium text-white bg-red-500 rounded-lg hover:bg-red-600">
+                Clear File
+            </button>
         </div>
+
+        <!-- Process -->
+        <button id="processBtn"
+            class="w-full py-2 font-semibold text-white bg-orange-400 rounded-lg hover:bg-orange-500/85">
+            Proses & Unduh ZIP
+        </button>
+
+        <!-- Preview -->
+        <div id="previewContainer" class="hidden mt-6">
+            <h2 class="mb-1 text-sm font-semibold text-gray-700">📋 Detected Columns:</h2>
+            <pre id="columnsList"
+                class="p-3 overflow-auto text-xs text-left text-gray-700 border rounded-lg bg-gray-50"></pre>
+        </div>
+
+        <!-- Status -->
+        <p id="status" class="mt-4 text-sm text-gray-700"></p>
     </div>
+
     <!-- Blur -->
     <div class="relative">
-        <div class="absolute w-32 h-32 rounded-full left-20 -z-10 bg-mainColor/20 blur-xl"></div>
+        <div class="absolute w-32 h-32 rounded-full left-20 -z-10 bg-mainColor/30 blur-xl"></div>
     </div>
     <!-- end blur -->
-    <!-- Blur -->
-    <div class="relative">
-        <div class="absolute w-32 h-32 rounded-full left-20 -z-10 bg-mainColor/20 blur-xl"></div>
-    </div>
-    <!-- end blur -->
+
+    <!-- script cvtimage -->
     <script src="./src/cvtimage.js"></script>
 </body>
 
